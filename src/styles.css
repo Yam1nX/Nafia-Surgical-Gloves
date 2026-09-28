@@ -122,12 +122,10 @@ body{padding-bottom:calc(66px + env(safe-area-inset-bottom))}
 .footer-bottom{grid-template-columns:1fr;gap:6px;padding:16px 0;text-align:center}.footer-bottom>span:nth-child(2){text-align:center}
 .mobile-contact-bar a{font-size:13px;min-height:58px}
 }
-@media(max-width:380px){.shell{width:calc(100% - 32px)}.brand__text small{display:none}.footer-main{grid-template-columns:1fr}}
+@media(max-width:380px){.shell{width:calc(100% - 32px)}.brand__text small{font-size:7px;letter-spacing:.16em}.brand__text b{font-size:16px}.brand__mark{width:32px;height:32px}.footer-main{grid-template-columns:1fr}}
 
-/* Quick-contact bar is for phones only */
 @media(min-width:761px){.mobile-contact-bar{display:none!important}}
 
-/* ===== Hero animated background (transform-only, GPU friendly) ===== */
 .hero__bg{position:absolute;z-index:-1;inset:0;overflow:hidden;pointer-events:none}
 .hero__bg i{position:absolute;border-radius:50%;background:radial-gradient(circle,var(--c) 0,transparent 68%);will-change:transform}
 .hero__bg i:nth-child(1){--c:rgba(74,140,112,.5);width:62vmax;height:62vmax;right:-18%;top:-30%;animation:bg-a 22s ease-in-out infinite alternate}
@@ -140,3 +138,6 @@ body{padding-bottom:calc(66px + env(safe-area-inset-bottom))}
 @keyframes bg-beam{0%{transform:translateX(0) skewX(-18deg)}55%,100%{transform:translateX(480%) skewX(-18deg)}}
 @media(max-width:760px){.hero__bg i:nth-child(3),.hero__bg::after{display:none}}
 @media(prefers-reduced-motion:reduce){.hero__bg i,.hero__bg::after{animation:none}}
+
+.brand__text small{display:block!important;white-space:nowrap}
+@media(max-width:380px){.brand__text small{font-size:7px;letter-spacing:.16em}}
