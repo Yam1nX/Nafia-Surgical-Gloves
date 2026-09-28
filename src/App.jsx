@@ -32,7 +32,7 @@ function Icon({ name, size = 20, className = '' }) {
 }
 
 const navigation = [
-  ['#why-nafia', 'Why NAFIA'],
+  ['#why-nafia', 'Why Nafia Surgical Mart'],
   ['#product', 'Product'],
   ['#order-help', 'Order help'],
   ['#planner', 'Planner'],
