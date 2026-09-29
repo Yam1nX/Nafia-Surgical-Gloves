@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import './styles.css'
 
-const PHONE = '+8801621-822615'
-const SHOW_PHONE = '+8801621-822615'
+const PHONE = '+8801621822615'
+const SHOW_PHONE = '+880 1621-822615'
 const EMAIL = 'nafiaagroplusbd@gmail.com'
 const ADDRESS = 'B-2, H #160, Rd #02, Sugandha R/A, Panchlaish, Chattogram-4203'
 const MAP_QUERY = encodeURIComponent('Sugandha R/A, Panchlaish, Chattogram 4203')
