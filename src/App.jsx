@@ -61,7 +61,7 @@ const faqs = [
 ]
 
 function Brand({ light = false }) {
-  return <a className={`brand${light ? ' brand--light' : ''}`} href="#top" aria-label="NAFIA Surgical Mart home">
+  return <a className={`brand${light ? ' brand--light' : ''}`} href="#top" aria-label="NAFIA Surgical Gloves home">
     <span className="brand__mark"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 28V13.5a4.5 4.5 0 0 1 9 0v12V10a4.5 4.5 0 0 1 9 0v15V12.5a4.5 4.5 0 0 1 9 0v15l1.1-7.3a4.4 4.4 0 0 1 8.7 1.3l-2.2 16.2c-.7 5.1-3.4 9-7.6 11.3l-1.3.7v9.8H23v-8.1l-6.2-8.3a9.8 9.8 0 0 1-1.9-5.8V28Z" fill="currentColor"/><path d="M52 5v5h5v4h-5v5h-4v-5h-5v-4h5V5z" fill="#c6a45c"/></svg></span>
     <span className="brand__text"><b>NAFIA</b><small>SURGICAL GLOVES</small></span>
   </a>
@@ -195,7 +195,7 @@ function GloveInspector() {
       {studio ? <ul className="inspect-notes">{inspectNotes.map((n, i) => <li key={n.title}><button type="button" className={active === i ? 'on' : ''} onClick={() => pick(i)}><span>{i + 1}</span><div><b>{n.title}</b><p>{n.text}</p></div></button></li>)}</ul>
         : <p className="inspect-single">In this photo the pair is marked L and R. Hand-specific gloves are shaped for each hand, so check the marking before use.</p>}
       <p className="inspect-fine">Photos show a sample pair; your batch may differ slightly. Ask us for current photos of the stock you want.</p>
-      <a className="button button--gold" href={whatsapp('Hello NAFIA Surgical Mart, could you send current photos of the gloves in stock?')} target="_blank" rel="noreferrer"><Icon name="whatsapp"/> Ask for current photos</a>
+      <a className="button button--gold" href={whatsapp('Hello NAFIA Surgical Gloves, could you send current photos of the gloves in stock?')} target="_blank" rel="noreferrer"><Icon name="whatsapp"/> Ask for current photos</a>
     </div>
   </div></section>
 }
@@ -214,13 +214,13 @@ function Planner() {
         <h3>Find your glove size</h3><p>Measure across your palm at its widest point, below the knuckles and without the thumb.</p>
         <label className="range"><span>Palm width <b>{palm} mm</b></span><input type="range" min="70" max="100" value={palm} onChange={(e) => setPalm(+e.target.value)}/><i><em>70</em><em>85</em><em>100</em></i></label>
         <div className="planner-result"><span>Suggested size</span><strong key={size}>{size}</strong></div>
-        <a className="button button--green" href={whatsapp(`Hello NAFIA Surgical Mart, I would like a quotation for NAFIA Powdered Latex Surgical Gloves, size ${size}. Please confirm current availability.`)} target="_blank" rel="noreferrer"><Icon name="whatsapp"/> Ask about size {size}</a>
+        <a className="button button--green" href={whatsapp(`Hello NAFIA Surgical Gloves, I would like a quotation for NAFIA Powdered Latex Surgical Gloves, size ${size}. Please confirm current availability.`)} target="_blank" rel="noreferrer"><Icon name="whatsapp"/> Ask about size {size}</a>
       </div>
       <div className="planner-card">
         <h3>Estimate how much you need</h3><p>Based on the packaging: 50 pairs per box, 200 pairs per carton.</p>
         <div className="form-row"><label className="form-field"><span>Pairs used per day</span><input type="number" min="0" value={perDay} onChange={(e) => setPerDay(+e.target.value)}/></label><label className="form-field"><span>Number of days</span><input type="number" min="0" value={days} onChange={(e) => setDays(+e.target.value)}/></label></div>
         <div className="planner-result"><span>{pairs.toLocaleString('en-US')} pairs needed</span><strong key={boxes}>{boxes.toLocaleString('en-US')} <small>boxes</small></strong><em>about {cartons.toLocaleString('en-US')} cartons</em></div>
-        <a className="button button--green" href={whatsapp(`Hello NAFIA Surgical Mart, I need about ${pairs} pairs (${boxes} boxes) of NAFIA Powdered Latex Surgical Gloves. Please confirm availability and quotation.`)} target="_blank" rel="noreferrer"><Icon name="whatsapp"/> Request this quantity</a>
+        <a className="button button--green" href={whatsapp(`Hello NAFIA Surgical Gloves, I need about ${pairs} pairs (${boxes} boxes) of NAFIA Powdered Latex Surgical Gloves. Please confirm availability and quotation.`)} target="_blank" rel="noreferrer"><Icon name="whatsapp"/> Request this quantity</a>
       </div>
     </div>
   </div></section>
@@ -310,11 +310,11 @@ function ProductCard() {
           <div className="product-sizes"><div className="field-label"><span>Choose a size to ask about</span><span>Size on packaging</span></div><div className="size-picker" role="radiogroup" aria-label="Select a glove size">{sizes.map((value) => <button key={value} type="button" role="radio" aria-checked={size === value} className={size === value ? 'size-picker__option size-picker__option--selected' : 'size-picker__option'} onClick={() => setSize(value)}>{value}</button>)}</div></div>
           <dl className="product-specs"><div><dt>Pack format</dt><dd>50 pairs / box · 200 pairs / carton</dd></div><div><dt>Origin listed</dt><dd>Made in Malaysia</dd></div><div><dt>Standard reference</dt><dd>ASTM D3577 — printed on supplied packaging</dd></div><div><dt>Product type</dt><dd>Powdered · sterile · hand-specific</dd></div></dl>
           <p className="product-caution"><Icon name="shield" size={17}/><span><b>Please note:</b> Contains natural rubber latex; allergic reactions may occur. Single use only. Check the complete package before use.</span></p>
-          <a className="button button--green product-card__cta" href={whatsapp(`Hello NAFIA Surgical Mart, I would like a quotation for NAFIA Powdered Latex Surgical Gloves, size ${size}. Please confirm current availability and packaging.`)} target="_blank" rel="noreferrer"><Icon name="whatsapp"/> Ask about size {size}<Icon name="arrow" size={17}/></a>
+          <a className="button button--green product-card__cta" href={whatsapp(`Hello NAFIA Surgical Gloves, I would like a quotation for NAFIA Powdered Latex Surgical Gloves, size ${size}. Please confirm current availability and packaging.`)} target="_blank" rel="noreferrer"><Icon name="whatsapp"/> Ask about size {size}<Icon name="arrow" size={17}/></a>
           <p className="product-card__fine">Packaging claims shown in these reference photos are not independently verified on this page; confirm current details and availability with NAFIA.</p>
         </div>
       </div>
-      <div className="product-footnote"><span className="product-footnote__mark">i</span><p>Need a different medical or surgical item? Tell us the item name and required quantity. We will confirm what is currently available and provide a quotation where possible.</p><a href={whatsapp('Hello NAFIA Surgical Mart, I need a quotation for a medical or surgical item. Item: ')} target="_blank" rel="noreferrer">Describe what you need <Icon name="arrow" size={16}/></a></div>
+      <div className="product-footnote"><span className="product-footnote__mark">i</span><p>Need a different medical or surgical item? Tell us the item name and required quantity. We will confirm what is currently available and provide a quotation where possible.</p><a href={whatsapp('Hello NAFIA Surgical Gloves, I need a quotation for a medical or surgical item. Item: ')} target="_blank" rel="noreferrer">Describe what you need <Icon name="arrow" size={16}/></a></div>
     </div>
   </section>
 }
@@ -328,7 +328,7 @@ function OrderHelp() {
         <div className="help-card help-card--steps"><div className="help-card__top"><span className="help-number">01</span><span className="help-card__label">A QUICK ORDER CHECKLIST</span></div><h3>Include these details</h3><p>Send one message with the information your supplier needs to respond usefully.</p><ul className="checklist"><li><span><Icon name="check" size={14}/></span> Product or item name</li><li><span><Icon name="check" size={14}/></span> Size or specification, if relevant</li><li><span><Icon name="check" size={14}/></span> Quantity required</li><li><span><Icon name="check" size={14}/></span> District and upazila / delivery area</li></ul><div className="help-card__tip"><Icon name="clock" size={18}/><span>Confirm price, current stock and delivery or collection arrangements <b>before</b> travelling.</span></div></div>
         <div className="help-card help-card--bangla"><div className="help-card__top"><span className="help-number">02</span><span className="help-card__label">সহজ অর্ডার · BANGLA GUIDE</span></div><h3 lang="bn">দূরে থাকলেও জানতে পারেন</h3><p lang="bn">পণ্যের নাম, সাইজ ও পরিমাণ লিখে আপনার জেলা ও উপজেলার নামসহ WhatsApp করুন। অর্ডার বা যাত্রার আগে আপনার এলাকায় সরবরাহ সম্ভব কি না, পণ্য মজুত আছে কি না এবং দাম কত—নিশ্চিত হয়ে নিন।</p><a className="button button--gold" href={whatsapp(template)} target="_blank" rel="noreferrer" lang="bn"><Icon name="whatsapp"/> বাংলায় জিজ্ঞেস করুন <Icon name="arrow" size={17}/></a><small className="help-card__disclaimer" lang="bn">আপনার এলাকার সরবরাহ নিশ্চিত না হওয়া পর্যন্ত আমরা প্রতিশ্রুতি দিচ্ছি না—সরাসরি জেনে নিন।</small></div>
       </div>
-      <div className="service-note"><span className="service-note__icon"><Icon name="pin" size={20}/></span><p><b>Checking service for a specific area?</b><br/>Share your district, upazila or town. Our team can tell you what arrangements may be possible for your location.</p><a href={whatsapp('Hello NAFIA Surgical Mart, please let me know whether service may be possible for my area. District: ___; Upazila / town: ___.')} target="_blank" rel="noreferrer">Ask about your area <Icon name="arrow" size={16}/></a></div>
+      <div className="service-note"><span className="service-note__icon"><Icon name="pin" size={20}/></span><p><b>Checking service for a specific area?</b><br/>Share your district, upazila or town. Our team can tell you what arrangements may be possible for your location.</p><a href={whatsapp('Hello NAFIA Surgical Gloves, please let me know whether service may be possible for my area. District: ___; Upazila / town: ___.')} target="_blank" rel="noreferrer">Ask about your area <Icon name="arrow" size={16}/></a></div>
     </div>
   </section>
 }
@@ -375,7 +375,7 @@ function Contact() {
   const update = (key) => (event) => setForm((current) => ({ ...current, [key]: event.target.value }))
   const submit = (event) => {
     event.preventDefault()
-    const draft = `Hello NAFIA Surgical Mart, I would like a quotation.\nName: ${form.name}\nItem: ${form.item}\nSize / specification: ${form.size || 'Not applicable'}\nQuantity: ${form.quantity}\nDistrict / upazila / area: ${form.area || 'Please advise'}\nAdditional details: ${form.message || 'None'}\nPlease confirm current availability and whether arrangements can be made for my area.`
+    const draft = `Hello NAFIA Surgical Gloves, I would like a quotation.\nName: ${form.name}\nItem: ${form.item}\nSize / specification: ${form.size || 'Not applicable'}\nQuantity: ${form.quantity}\nDistrict / upazila / area: ${form.area || 'Please advise'}\nAdditional details: ${form.message || 'None'}\nPlease confirm current availability and whether arrangements can be made for my area.`
     window.open(whatsapp(draft), '_blank', 'noopener,noreferrer')
   }
   return <section className="section section--contact" id="contact"><div className="shell">
@@ -419,7 +419,7 @@ function Footer() {
 
 export default function App() {
   useEffect(() => {
-    document.title = 'NAFIA Surgical Mart | Medical & Surgical Supplies in Chattogram'
+    document.title = 'NAFIA Surgical Gloves | Medical & Surgical Supplies in Chattogram'
     const descriptionText = 'Ask NAFIA Surgical Gloves in Chattogram about surgical gloves and medical supplies. Confirm current availability, quotation and area arrangements directly.'
     let description = document.querySelector('meta[name="description"]')
     if (!description) {
