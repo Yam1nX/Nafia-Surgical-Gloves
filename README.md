@@ -1,4 +1,4 @@
-# NAFIA Surgical Mart
+# NAFIA Surgical Goves
 
 A responsive React/Vite website for NAFIA Surgical Mart. The public homepage is pre-rendered during production builds so its main content is present in the delivered HTML, then hydrated for interactive product photos, size selection, FAQs and quotation helpers.
 
