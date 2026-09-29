@@ -8,7 +8,7 @@ const ADDRESS = 'B-2, H #160, Rd #02, Sugandha R/A, Panchlaish, Chattogram-4203'
 const MAP_QUERY = encodeURIComponent('Sugandha R/A, Panchlaish, Chattogram 4203')
 const MAP_LINK = `https://www.google.com/maps/search/?api=1&query=${MAP_QUERY}`
 const MAP_EMBED = 'https://www.openstreetmap.org/export/embed.html?bbox=91.8224%2C22.356%2C91.8404%2C22.372&layer=mapnik&marker=22.364%2C91.8314'
-const whatsapp = (message = 'Hello NAFIA Surgical Mart, I would like to request a quotation.') =>
+const whatsapp = (message = 'Hello NAFIA Surgical Gloves, I would like to request a quotation.') =>
   `https://wa.me/${PHONE.replace(/\D/g, '')}?text=${encodeURIComponent(message)}`
 
 const iconPaths = {
@@ -32,7 +32,7 @@ function Icon({ name, size = 20, className = '' }) {
 }
 
 const navigation = [
-  ['#why-nafia', 'Why Nafia Surgical Mart'],
+  ['#why-nafia', 'Why Nafia Surgical Gloves'],
   ['#product', 'Product'],
   ['#order-help', 'Order help'],
   ['#planner', 'Planner'],
@@ -50,7 +50,7 @@ const productGallery = [
 ]
 
 const faqs = [
-  ['Do you supply hospitals, clinics and distributors?', 'Yes. NAFIA Surgical Mart serves care providers and resellers. Share the item, requested quantity and delivery area to ask about current availability and a quotation.'],
+  ['Do you supply hospitals, clinics and distributors?', 'Yes. NAFIA Surgical Gloves serves care providers and resellers. Share the item, requested quantity and delivery area to ask about current availability and a quotation.'],
   ['How can a customer outside Chattogram ask about an order?', 'Send your district and upazila together with the item and quantity on WhatsApp, or call us first. Please confirm current stock, the quotation and whether your specific area can be served before travelling or placing an order.'],
   ['Which glove sizes are listed on the packaging?', 'The supplied product information lists sizes 6.0, 6.5, 7.0 and 7.5. Ask us to confirm current availability for the size you need.'],
   ['How are the gloves packaged?', 'The supplied packaging information lists 50 pairs per box and 200 pairs per carton. Please confirm current packing and availability when requesting a quotation.'],
@@ -268,7 +268,7 @@ function About() {
   return <section className="section section--intro" id="why-nafia">
     <div className="shell intro-grid">
       <div className="section-heading"><p className="eyebrow eyebrow--dark"><span className="eyebrow__line"/> A LOCAL SUPPLY PARTNER</p><h2>Good care starts<br/>with <em>clear decisions.</em></h2></div>
-      <div className="intro-copy"><p>NAFIA Surgical Mart is the medical supply arm of Nafia Agro Products, led by proprietor Abu Taleb. From our base in Chattogram, we make it easier for care teams and distributors to ask about the products they need.</p><p>We keep the details practical: share an item and quantity, ask about the current quotation, and confirm your delivery area before you commit or travel.</p>
+      <div className="intro-copy"><p>NAFIA Surgical Gloves is the medical supply arm of Nafia Agro Products, led by proprietor Abu Taleb. From our base in Chattogram, we make it easier for care teams and distributors to ask about the products they need.</p><p>We keep the details practical: share an item and quantity, ask about the current quotation, and confirm your delivery area before you commit or travel.</p>
         <div className="intro-note"><span className="intro-note__icon"><Icon name="sparkle" size={19}/></span><span><b>A straightforward conversation.</b><small>Talk directly with our team by phone or WhatsApp.</small></span><a href={whatsapp()} target="_blank" rel="noreferrer" aria-label="Start a WhatsApp conversation"><Icon name="arrow"/></a></div>
       </div>
     </div>
@@ -320,7 +320,7 @@ function ProductCard() {
 }
 
 function OrderHelp() {
-  const template = 'আসসালামু আলাইকুম, আমি NAFIA Surgical Mart থেকে পণ্যের দাম জানতে চাই।\nপণ্যের নাম: \nসাইজ: \nপরিমাণ: \nজেলা: \nউপজেলা/এলাকা: \nআমার এলাকায় পণ্য পৌঁছে দেওয়া সম্ভব কি না এবং বর্তমান মজুত আছে কি না জানাবেন। ধন্যবাদ।'
+  const template = 'আসসালামু আলাইকুম, আমি NAFIA Surgical Gloves থেকে পণ্যের দাম জানতে চাই।\nপণ্যের নাম: \nসাইজ: \nপরিমাণ: \nজেলা: \nউপজেলা/এলাকা: \nআমার এলাকায় পণ্য পৌঁছে দেওয়া সম্ভব কি না এবং বর্তমান মজুত আছে কি না জানাবেন। ধন্যবাদ।'
   return <section className="section section--help" id="order-help">
     <div className="shell">
       <div className="help-intro"><div><p className="eyebrow"><span className="eyebrow__line"/> ORDER WITH CONFIDENCE</p><h2>Not nearby?<br/><em>Start with a message.</em></h2></div><p className="help-intro__copy">Before travelling or placing an order, ask what is in stock and whether your specific district or upazila can be served. A few details help us answer clearly.</p></div>
@@ -409,10 +409,10 @@ function Footer() {
     <div className="footer-cta"><div className="shell footer-cta__inner"><div><p className="eyebrow"><span className="eyebrow__line"/> YOUR NEXT STEP</p><h2>Need a quote? <em>We're here.</em></h2></div><a className="button button--gold" href={whatsapp()} target="_blank" rel="noreferrer"><Icon name="whatsapp"/> Message the team <Icon name="arrow" size={17}/></a></div></div>
     <div className="shell footer-main"><div className="footer-brand"><Brand light/><p>Medical and surgical goods suppliers. A sister concern of M/s. Nafia Agro Products and Ameena Corporation.</p><span className="footer-brand__caption">SUPPLY WITH CARE · CHATTOGRAM</span></div>
       <div className="footer-column"><h3>Explore</h3>{navigation.map(([href, label]) => <a key={href} href={href}>{label}</a>)}<a href="#how-to-order">How to order</a></div>
-      <div className="footer-column"><h3>Ask us about</h3><a href="#product">Powdered latex surgical gloves</a><a href="#product">Sizes &amp; packaging details</a><a href={whatsapp('Hello NAFIA Surgical Mart, I would like to ask about other medical and surgical goods.')} target="_blank" rel="noreferrer">Other medical goods</a><a href={whatsapp('Hello NAFIA Surgical Mart, I would like to ask about Medtronic products.')} target="_blank" rel="noreferrer">Medtronic product enquiries</a></div>
+      <div className="footer-column"><h3>Ask us about</h3><a href="#product">Powdered latex surgical gloves</a><a href="#product">Sizes &amp; packaging details</a><a href={whatsapp('Hello NAFIA Surgical Mart, I would like to ask about other medical and surgical goods.')} target="_blank" rel="noreferrer">Other medical goods</a><a href={whatsapp('Hello NAFIA Surgical Gloves, I would like to ask about Medtronic products.')} target="_blank" rel="noreferrer">Medtronic product enquiries</a></div>
       <div className="footer-column footer-column--contact"><h3>Contact</h3><a href={`tel:${PHONE}`}>{SHOW_PHONE}</a><a href={whatsapp()} target="_blank" rel="noreferrer">WhatsApp our team</a><a href={`mailto:${EMAIL}`}>{EMAIL}</a><span>{ADDRESS}</span></div>
     </div>
-    <div className="shell footer-bottom"><span>© {new Date().getFullYear()} NAFIA Surgical Mart. All rights reserved.</span><span>Clear information. Direct conversation.</span><a href="#top">Back to top ↑</a></div>
+    <div className="shell footer-bottom"><span>© {new Date().getFullYear()} NAFIA Surgical Gloves. All rights reserved.</span><span>Clear information. Direct conversation.</span><a href="#top">Back to top ↑</a></div>
   </footer>
 }
 
@@ -420,7 +420,7 @@ function Footer() {
 export default function App() {
   useEffect(() => {
     document.title = 'NAFIA Surgical Mart | Medical & Surgical Supplies in Chattogram'
-    const descriptionText = 'Ask NAFIA Surgical Mart in Chattogram about surgical gloves and medical supplies. Confirm current availability, quotation and area arrangements directly.'
+    const descriptionText = 'Ask NAFIA Surgical Gloves in Chattogram about surgical gloves and medical supplies. Confirm current availability, quotation and area arrangements directly.'
     let description = document.querySelector('meta[name="description"]')
     if (!description) {
       description = document.createElement('meta')
