@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import './styles.css'
 
-const PHONE = '+8801612747578'
-const SHOW_PHONE = '+880 1612-747578'
+const PHONE = '+8801621-822615'
+const SHOW_PHONE = '+8801621-822615'
 const EMAIL = 'nafiaagroplusbd@gmail.com'
 const ADDRESS = 'B-2, H #160, Rd #02, Sugandha R/A, Panchlaish, Chattogram-4203'
 const MAP_QUERY = encodeURIComponent('Sugandha R/A, Panchlaish, Chattogram 4203')
@@ -52,7 +52,7 @@ const productGallery = [
 const faqs = [
   ['Do you supply hospitals, clinics and distributors?', 'Yes. NAFIA Surgical Gloves serves care providers and resellers. Share the item, requested quantity and delivery area to ask about current availability and a quotation.'],
   ['How can a customer outside Chattogram ask about an order?', 'Send your district and upazila together with the item and quantity on WhatsApp, or call us first. Please confirm current stock, the quotation and whether your specific area can be served before travelling or placing an order.'],
-  ['Which glove sizes are listed on the packaging?', 'The supplied product information lists sizes 6.0, 6.5, 7.0 and 7.5. Ask us to confirm current availability for the size you need.'],
+  ['Which glove sizes are listed on the packaging?', 'The supplied product information lists sizes 6.5, 7.0 and 7.5. Ask us to confirm current availability for the size you need.'],
   ['How are the gloves packaged?', 'The supplied packaging information lists 50 pairs per box and 200 pairs per carton. Please confirm current packing and availability when requesting a quotation.'],
   ['Are these gloves suitable for someone with a latex allergy?', 'They contain natural rubber latex, which may cause allergic reactions. If you or a patient may have a latex allergy, do not rely on this product without checking the complete packaging and consulting an appropriately qualified healthcare professional.'],
   ['What should I check before placing an order?', 'Confirm the item, size, quantity, quoted price, current availability and whether delivery or collection is possible for your specific location. Check that the sterile pouch is intact before use. The product is single use only.'],
@@ -138,7 +138,7 @@ function HeroArtwork() {
     <div className="hero-art__label hero-art__label--bottom"><span>01</span> CARE-READY SUPPLIES</div>
     <div className="chip chip--a" style={{ '--d': 26 }}><Icon name="box" size={16}/><span><b>50 pairs</b><small>per box</small></span></div>
     <div className="chip chip--b" style={{ '--d': 40 }}><Icon name="shield" size={16}/><span><b>Sterile</b><small>single use</small></span></div>
-    <div className="chip chip--c" style={{ '--d': 18 }}><Icon name="check" size={16}/><span><b>Sizes 6.0–7.5</b><small>ask for stock</small></span></div>
+    <div className="chip chip--c" style={{ '--d': 18 }}><Icon name="check" size={16}/><span><b>Sizes 6.5, 7.0 & 7.5</b><small>ask for stock</small></span></div>
     <div className="hero-art__stamp"><span>NAFIA</span><small>SUPPLY WITH CARE</small></div>
   </div>
 }
@@ -204,7 +204,7 @@ function Planner() {
   const [palm, setPalm] = useState(86)
   const [perDay, setPerDay] = useState(20)
   const [days, setDays] = useState(30)
-  const size = palm < 80 ? '6.0' : palm < 86 ? '6.5' : palm < 92 ? '7.0' : '7.5'
+  const size = palm < 86 ? '6.5' : palm < 92 ? '7.0' : '7.5'
   const pairs = Math.max(0, perDay) * Math.max(0, days)
   const boxes = Math.ceil(pairs / 50), cartons = Math.ceil(pairs / 200)
   return <section className="section section--planner" id="planner"><div className="shell">
@@ -245,7 +245,8 @@ function Hero() {
     <div className="shell hero__grid">
       <div className="hero__copy">
         <div className="eyebrow"><span className="eyebrow__line"/> A PRACTICAL PARTNER IN CARE</div>
-<h1><span className="line"><span style={{ '--i': 0 }}>Quality surgical supplies from</span></span><span className="line"><span style={{ '--i': 1 }}><em>Malaysia</em>, delivered with care.</span></span></h1>        <p className="hero__lead">Medical and surgical goods for hospitals, clinics and distributors—sourced with care and quoted directly by our Chattogram team.</p>
+<h1><span className="line"><span style={{ '--i': 0 }}>Surgical Gloves Imported from</span></span><span className="line"><span style={{ '--i': 1 }}><em>Malaysia</em></span></span></h1>
+<p className="hero__lead">We import surgical gloves from Malaysia and supply them to hospitals, clinics and medical distributors across Bangladesh.</p>
         <div className="hero__actions">
           <a className="button button--gold" href={whatsapp()} target="_blank" rel="noreferrer"><Icon name="whatsapp"/> Ask for a quotation <Icon name="arrow" size={17}/></a>
           <a className="button button--outline" href={`tel:${PHONE}`}><Icon name="phone"/>{SHOW_PHONE}</a>
@@ -297,7 +298,7 @@ function ProductGallery() {
 
 function ProductCard() {
   const [size, setSize] = useState('6.5')
-  const sizes = ['6.0', '6.5', '7.0', '7.5']
+  const sizes = ['6.5', '7.0', '7.5']
   return <section className="section section--product" id="product">
     <div className="shell">
       <div className="section-topline"><p className="eyebrow eyebrow--dark"><span className="eyebrow__line"/> FEATURED PRODUCT</p><span className="section-topline__note">Clear details. Direct quotation.</span></div>
@@ -385,7 +386,7 @@ function Contact() {
         <div className="quote-form__heading"><span>REQUEST A QUOTATION</span><span className="quote-form__required">* Required</span></div>
         <label className="form-field"><span>Your name <b>*</b></span><input autoComplete="name" required value={form.name} onChange={update('name')} placeholder="e.g. Rahim Uddin"/></label>
         <label className="form-field"><span>Item or product <b>*</b></span><input required value={form.item} onChange={update('item')} placeholder="What are you looking for?"/></label>
-        <div className="form-row"><label className="form-field"><span>Size / specification</span><select value={form.size} onChange={update('size')}><option value="6.0">Glove size 6.0</option><option value="6.5">Glove size 6.5</option><option value="7.0">Glove size 7.0</option><option value="7.5">Glove size 7.5</option><option value="">Not applicable / other</option></select></label><label className="form-field"><span>Quantity</span><input value={form.quantity} onChange={update('quantity')} placeholder="e.g. 10 boxes"/></label></div>
+        <div className="form-row"><label className="form-field"><span>Size / specification</span><select value={form.size} onChange={update('size')}><option value="6.5">Glove size 6.5</option><option value="7.0">Glove size 7.0</option><option value="7.5">Glove size 7.5</option><option value="">Not applicable / other</option></select></label><label className="form-field"><span>Quantity</span><input value={form.quantity} onChange={update('quantity')} placeholder="e.g. 10 boxes"/></label></div>
         <label className="form-field"><span>District / upazila / area <small>(for delivery enquiries)</small></span><input autoComplete="address-level2" value={form.area} onChange={update('area')} placeholder="Your district and upazila"/></label>
         <label className="form-field"><span>Anything else?</span><textarea rows="3" value={form.message} onChange={update('message')} placeholder="Share any important details"/></label>
         <button className="button button--gold quote-form__submit" type="submit"><Icon name="whatsapp"/> Continue in WhatsApp <Icon name="arrow" size={17}/></button>
